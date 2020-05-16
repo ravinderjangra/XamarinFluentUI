@@ -3,12 +3,13 @@
   <attr path="/api/package[@name='com.microsoft.fluentui.util']/class[@name='ColorProperty']/method[@name='get' and count(parameter)=1 and parameter[1][@type='android.view.View']]/parameter[1]" name="managedType">Java.Lang.Object</attr>
   <attr path="/api/package[@name='com.microsoft.fluentui.util']/class[@name='ColorProperty']/method[@name='get' and count(parameter)=1 and parameter[1][@type='android.view.View']]" name="managedReturn">Java.Lang.Object</attr>
   
-  This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
   <attr path="/api/package[@name='com.microsoft.fluentui.listitem']/class[@name='ListItemView']/method[@name='getBackground' and count(parameter)=0]" name="return">android.graphics.drawable.Drawable</attr>
+  <attr path="/api/package[@name='com.microsoft.fluentui.listitem']/class[@name='ListItemView']/method[@name='setBackground' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]" name="type">android.graphics.drawable.Drawable</attr>
   <attr path="/api/package[@name='com.microsoft.fluentui.listitem']/class[@name='ListItemView']/method[@name='getBackground' and count(parameter)=0]" name="managedReturn">Android.Graphics.Drawables.Drawable</attr>
   <attr path="/api/package[@name='com.microsoft.fluentui.listitem']/class[@name='ListItemView']/method[@name='setBackground' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]" name="managedType">Android.Graphics.Drawables.Drawable</attr>
   <attr path="/api/package[@name='com.microsoft.fluentui.listitem']/class[@name='ListSubHeaderView']/method[@name='getBackground' and count(parameter)=0]" name="return">android.graphics.drawable.Drawable</attr>
   <attr path="/api/package[@name='com.microsoft.fluentui.listitem']/class[@name='ListSubHeaderView']/method[@name='setBackground' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]" name="type">android.graphics.drawable.Drawable</attr>
+  <attr path="/api/package[@name='com.microsoft.fluentui.listitem']/class[@name='ListSubHeaderView']/method[@name='getBackground' and count(parameter)=0]" name="managedReturn">Android.Graphics.Drawables.Drawable</attr>
   <attr path="/api/package[@name='com.microsoft.fluentui.listitem']/class[@name='ListSubHeaderView']/method[@name='setBackground' and count(parameter)=1 and parameter[1][@type='int']]/parameter[1]" name="managedType">Android.Graphics.Drawables.Drawable</attr>
     
   <attr path="/api/package[@name='com.microsoft.fluentui.popupmenu']/class[@name='PopupMenuItem.CREATOR']" name="managedName">Creator</attr>
