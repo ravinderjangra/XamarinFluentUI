@@ -23,6 +23,7 @@
     <PackageProjectUrl>https://github.com/ravinderjangra/XamarinFluentUI</PackageProjectUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageVersion>0.0.1</PackageVersion>
+    <PackOnBuild>true</PackOnBuild>
   </PropertyGroup>
   
   <ItemGroup>

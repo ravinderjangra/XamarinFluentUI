@@ -37,17 +37,17 @@ jobs:
         chmod +x buildandpack.sh
         ./buildandpack.sh
       displayName: 'Build and Generate packages'
-  #   - task: CopyFiles@2
-  #     displayName: 'Copy NuGet Package Files to: $(Build.ArtifactStagingDirectory)'
-  #     inputs:
-  #       SourceFolder: '$(Build.SourcesDirectory)'
-  #       Contents: '*.nupkg'
-  #       TargetFolder: '$(Build.ArtifactStagingDirectory)'
-  #       flattenFolders: true
-  #   - task: PublishBuildArtifacts@1
-  #     displayName: 'Publish Artifact: package'
-  #     inputs:
-  #       ArtifactName: package
+    - task: CopyFiles@2
+      displayName: 'Copy NuGet Package Files to: $(Build.ArtifactStagingDirectory)'
+      inputs:
+        SourceFolder: '$(Build.SourcesDirectory)'
+        Contents: '*.nupkg'
+        TargetFolder: '$(Build.ArtifactStagingDirectory)'
+        flattenFolders: true
+    - task: PublishBuildArtifacts@1
+      displayName: 'Publish Artifact: package'
+      inputs:
+        ArtifactName: package
 
   # - job: release_packages
   #   displayName: 'GitHub and NuGet Release'

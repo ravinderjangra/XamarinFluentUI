@@ -1,0 +1,59 @@
+<Project Sdk="MSBuild.Sdk.Extras/2.0.54">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;Xamarin.iOS10;MonoAndroid90;MonoAndroid10.0</TargetFrameworks>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <PackOnBuild>true</PackOnBuild>
+  </PropertyGroup>
+    
+  <PropertyGroup>
+    <PackageId>Xamarin.Forms.Visual.FluentUI</PackageId>
+    <Title>Xamarin.Forms Fluent Visual</Title>
+    <Summary>Develop Xamarin.Forms apps with Fluent UI.</Summary>
+    <Authors>Ravinder Jangra</Authors>
+    <Owners>Ravinder Jangra</Owners>
+    <PackageProjectUrl>https://github.com/ravinderjangra/XamarinFluentUI</PackageProjectUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageVersion>0.0.1</PackageVersion>
+    <PackOnBuild>true</PackOnBuild>
+    <dependencies>
+      <group targetFramework="MonoAndroid10.0">
+        <dependency id="Xamarin.Forms" version="4.4.0.991640"/>
+        <dependency id="Xamarin.Android.FluentUI" version="0.0.1"/>
+        <dependency id="Xamarin.AndroidX.Lifecycle.LiveData" version="2.1.0" />
+        <dependency id="Xamarin.Android.JakeWharton.ThreeTenAbp" version="1.2.4" />
+        <dependency id="Xamarin.Android.Splitwise.TokenAutoComplete" version="2.0.8" />
+      </group>
+      <group targetFramework="Xamarin.iOS10">
+        <dependency id="Xamarin.Forms" version="4.4.0.991640"/>
+        <dependency id="Xamarin.iOS.FluentUI" version="0.0.1"/>
+      </group>
+    </dependencies>
+  </PropertyGroup>
+    
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="4.6.0.726" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Compile Include="Shared\*.cs" />
+  </ItemGroup>
+  
+  <ItemGroup Condition=" $(TargetFramework.StartsWith('Xamarin.iOS')) ">
+    <Compile Include="iOS\*.cs" />
+    <ProjectReference Include="..\FluentUI.iOS\FluentUI.iOS.csproj" />
+  </ItemGroup>
+  
+  <ItemGroup Condition="'$(TargetFramework)' == 'MonoAndroid10.0'">
+    <PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.1.0" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(TargetFramework)' == 'MonoAndroid90'">
+    <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="28.0.0.3" />
+  </ItemGroup>
+  
+  <ItemGroup Condition=" $(TargetFramework.StartsWith('MonoAndroid')) ">
+    <Compile Include="Android\*.cs" />
+    <ProjectReference Include="..\FluentUI.Android\FluentUI.Android.csproj" />
+  </ItemGroup>
+
+</Project>
