@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentUI.Android", "FluentUI.Android\FluentUI.Android.csproj", "{FE4EBDCC-0395-4512-971F-BA49283B23C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentUI.iOS", "FluentUI.iOS\FluentUI.iOS.csproj", "{6727648F-61CA-4519-963C-D68C80AF41FF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FE4EBDCC-0395-4512-971F-BA49283B23C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE4EBDCC-0395-4512-971F-BA49283B23C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE4EBDCC-0395-4512-971F-BA49283B23C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE4EBDCC-0395-4512-971F-BA49283B23C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6727648F-61CA-4519-963C-D68C80AF41FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6727648F-61CA-4519-963C-D68C80AF41FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6727648F-61CA-4519-963C-D68C80AF41FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6727648F-61CA-4519-963C-D68C80AF41FF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="MSBuild.Sdk.Extras/2.0.54">
+  <PropertyGroup>
+    <TargetFrameworks>Xamarin.iOS10</TargetFrameworks>
+    <IsBindingProject>true</IsBindingProject>
+    <AssemblyName>FluentUIComponents</AssemblyName>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <RootNamespace>FluentUIComponents</RootNamespace>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <ProcessEnums>true</ProcessEnums>
+  </PropertyGroup>
+  
+  <PropertyGroup>
+    <PackageId>Xamarin.iOS.FluentUI</PackageId>
+    <Title>Xamarin Fluent UI Components for iOS</Title>
+    <Summary>Develop iOS apps using Fluent UI.</Summary>
+    <Authors>Ravinder Jangra</Authors>
+    <Owners>Ravinder Jangra</Owners>
+    <PackageProjectUrl>https://github.com/ravinderjangra/XamarinFluentUI</PackageProjectUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageVersion>0.0.1</PackageVersion>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="Xamarin.iOS" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Structs.cs" />
+    <Compile Remove="ApiDefinition.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ObjcBindingApiDefinition Include="ApiDefinition.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ObjcBindingCoreSource Include="Structs.cs" />
+  </ItemGroup>
+</Project>
