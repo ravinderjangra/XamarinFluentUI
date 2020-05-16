@@ -1,0 +1,110 @@
+
+trigger:
+  branches:
+    include:
+    - master
+  paths:
+    exclude:
+    - README.md
+
+pr:
+  branches:
+    include:
+    - master
+  paths:
+    exclude:
+    - README.md
+
+jobs:
+  - job: build_components
+    displayName: 'Build platform component libraries'
+    pool:
+      vmImage: 'macos-latest'
+    steps:
+    - task: NuGetToolInstaller@1
+      displayName: 'Use NuGet 5.x'
+      inputs:
+        versionSpec: 5.x
+    - task: NuGetCommand@2
+      displayName: 'NuGet restore'
+    - bash: |
+        chmod +x build.sh
+        ./build.sh --target=ios-externals
+        ./build.sh --target=android-externals
+      workingDirectory: Build
+      displayName: 'Build/Downlload native libs'
+    - bash: |
+        chmod +x buildandpack.sh
+        ./buildandpack.sh
+      displayName: 'Build and Generate packages'
+  #   - task: CopyFiles@2
+  #     displayName: 'Copy NuGet Package Files to: $(Build.ArtifactStagingDirectory)'
+  #     inputs:
+  #       SourceFolder: '$(Build.SourcesDirectory)'
+  #       Contents: '*.nupkg'
+  #       TargetFolder: '$(Build.ArtifactStagingDirectory)'
+  #       flattenFolders: true
+  #   - task: PublishBuildArtifacts@1
+  #     displayName: 'Publish Artifact: package'
+  #     inputs:
+  #       ArtifactName: package
+
+  # - job: release_packages
+  #   displayName: 'GitHub and NuGet Release'
+  #   pool:
+  #     vmImage: 'macos-latest'
+  #   dependsOn: [ build_components ]
+  #   condition: and(succeeded(), eq(variables['build.sourceBranch'], 'refs/heads/master'))
+  #   steps:
+  #   - task: DownloadPipelineArtifact@2
+  #     displayName: 'Download Pipeline Artifact'
+  #     inputs:
+  #       itemPattern: '**/*.nupkg'
+  #       targetPath: '$(Build.ArtifactStagingDirectory)'
+  #   - task: CopyFiles@2
+  #     displayName: 'Copy Files to: $(Build.SourcesDirectory)'
+  #     inputs:
+  #         SourceFolder: '$(Build.ArtifactStagingDirectory)'
+  #         Contents: '**/*.nupkg'
+  #         TargetFolder: '$(Build.SourcesDirectory)'
+  #         flattenFolders: true
+  #   - bash: |
+  #       export commitMessage=$(git log --format=%B -n 1)
+  #       echo $commitMessage
+
+  #       if [[ $commitMessage == [Vv]ersion[[:space:]]change* ]]; then
+  #         echo '##vso[task.setvariable variable=isVersionChange]true'
+  #         echo "##vso[task.setvariable variable=commit_message]$commitMessage"
+  #       fi
+        
+  #       if $isVersionChange; then
+  #         version=$(perl -pe '($_)=/([0-9]+([.][0-9]+)+([-][Rr][Cc][0-9]+)?)/' <<< $commitMessage)
+  #         echo "##vso[task.setvariable variable=new_version]$version"
+  #       fi
+  #     displayName: 'Check version change'
+  #   - bash: |
+  #       brew install coreutils
+  #       bash get_release_description.sh
+  #       cat release_description.txt
+  #     displayName: 'Generate Release Notes File'
+  #     workingDirectory: Build
+  #     condition: and(succeeded(), eq(variables['isVersionChange'], 'true'))
+  #   - task: GitHubRelease@1
+  #     displayName: 'GitHub release (create)'
+  #     inputs:
+  #       gitHubConnection: 'GitHubRelease'
+  #       tagSource: userSpecifiedTag
+  #       tag: '$(new_version)'
+  #       title: '$(new_version)'
+  #       releaseNotesFilePath: 'Build/release_description.txt'
+  #       assets: '$(Build.ArtifactStagingDirectory)/**/*.nupkg'
+  #       isDraft: true
+  #       addChangeLog: false
+  #     condition: and(succeeded(), eq(variables['isVersionChange'], 'true'))
+  #   - task: NuGetCommand@2
+  #     displayName: 'NuGet push'
+  #     inputs:
+  #       command: push
+  #       nuGetFeedType: external
+  #       publishFeedCredentials: 'NuGet package release'
+  #     condition: and(succeeded(), eq(variables['isVersionChange'], 'true'))
