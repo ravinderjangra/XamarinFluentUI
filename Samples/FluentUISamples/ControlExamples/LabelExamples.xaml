@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage x:Class="FluentUISamples.ControlExamples.LabelExamples"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:Fluent="clr-namespace:FluentUI.Visual.Forms;assembly=FluentUI.Visual"
+             Title="Fluent Label Examples">
+    <ContentPage.Content>
+        <StackLayout Padding="20"
+                     Visual="Fluent">
+            <Label Fluent:FluentLabel.LabelTextStyle="LargeTitle"
+                   Text="Label color Styles" />
+            <Label Fluent:FluentLabel.LabelColorStyle="Regular"
+                   Text="Regular" />
+            <Label Fluent:FluentLabel.LabelColorStyle="Primary"
+                   Text="Primary" />
+            <Label Fluent:FluentLabel.LabelColorStyle="Secondary"
+                   Text="Secondary" />
+            <Label Fluent:FluentLabel.LabelColorStyle="Error"
+                   Text="Error" />
+            <Label Fluent:FluentLabel.LabelColorStyle="Disabled"
+                   Text="Disabled" />
+            <Label Fluent:FluentLabel.LabelColorStyle="Warning"
+                   Text="Warning" />
+            <Label Fluent:FluentLabel.LabelColorStyle="White"
+                   Text="White" />
+
+            <Label Fluent:FluentLabel.LabelTextStyle="LargeTitle"
+                   Text="Label text Styles" />
+            <Label Fluent:FluentLabel.LabelTextStyle="Title1"
+                   Text="Title 1" />
+            <Label Fluent:FluentLabel.LabelTextStyle="Title2"
+                   Text="Title 2" />
+            <Label Fluent:FluentLabel.LabelTextStyle="Headline"
+                   Text="Headline" />
+            <Label Fluent:FluentLabel.LabelTextStyle="Body"
+                   Text="Body" />
+            <Label Fluent:FluentLabel.LabelTextStyle="Subhead"
+                   Text="Subhead" />
+            <Label Fluent:FluentLabel.LabelTextStyle="Footnote"
+                   Text="Footnote" />
+            <Label Fluent:FluentLabel.LabelTextStyle="Caption1"
+                   Text="Caption1" />
+            <Label Fluent:FluentLabel.LabelTextStyle="Caption2"
+                   Text="Caption2" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

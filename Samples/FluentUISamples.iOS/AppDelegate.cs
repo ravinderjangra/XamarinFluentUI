@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-using Foundation;
+﻿using Foundation;
 using UIKit;
 
 namespace FluentUISamples.iOS
@@ -22,6 +18,7 @@ namespace FluentUISamples.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
+            FluentUI.Visual.Platform.iOS.FluentVisual.Init();
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
 

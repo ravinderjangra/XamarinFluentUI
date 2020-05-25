@@ -25,7 +25,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <MtouchArch>x86_64</MtouchArch>
-    <MtouchLink>None</MtouchLink>
+    <MtouchLink>SdkOnly</MtouchLink>
     <MtouchDebug>true</MtouchDebug>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
@@ -130,6 +130,14 @@
     <ProjectReference Include="..\FluentUISamples\FluentUISamples.csproj">
       <Project>{3B7F2825-83D9-4D79-9416-4F3A8A699281}</Project>
       <Name>FluentUISamples</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\FluentUI.iOS\FluentUI.iOS.csproj">
+      <Project>{54B68E3F-3E76-4001-8D85-D2B600309C28}</Project>
+      <Name>FluentUI.iOS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\FluentUI.Visual\FluentUI.Visual.csproj">
+      <Project>{85DF7DD7-20BA-4C05-891D-9D0D634BFDC5}</Project>
+      <Name>FluentUI.Visual</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />

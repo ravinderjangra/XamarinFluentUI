@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ContentPage x:Class="FluentUISamples.ControlExamples.ButtonExamples"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:Fluent="clr-namespace:FluentUI.Visual.Forms;assembly=FluentUI.Visual"
+             Title="Fluent Button Examples">
+    <ContentPage.Content>
+        <StackLayout Padding="20"
+                     Visual="Fluent">
+            <Button Fluent:FluentButton.ButtonStyle="PrimaryFilled"
+                    HorizontalOptions="FillAndExpand"
+                    Text="Primary Filled" />
+            <Button Fluent:FluentButton.ButtonStyle="PrimaryFilled"
+                    HorizontalOptions="FillAndExpand"
+                    IsEnabled="False"
+                    Text="Primary Filled Disabled" />
+            <Button Fluent:FluentButton.ButtonStyle="PrimaryOutLine"
+                    HorizontalOptions="FillAndExpand"
+                    Text="Primary Outline" />
+            <Button Fluent:FluentButton.ButtonStyle="PrimaryOutLine"
+                    HorizontalOptions="FillAndExpand"
+                    IsEnabled="False"
+                    Text="Primary Outline Disabled" />
+            <Button Fluent:FluentButton.ButtonStyle="SecondaryOutLine"
+                    HorizontalOptions="FillAndExpand"
+                    Text="Secondary Outline" />
+            <Button Fluent:FluentButton.ButtonStyle="SecondaryOutLine"
+                    HorizontalOptions="FillAndExpand"
+                    IsEnabled="False"
+                    Text="Secondary Outline Disabled" />
+            <Button Fluent:FluentButton.ButtonStyle="Borderless"
+                    HorizontalOptions="FillAndExpand"
+                    Text="Borderless" />
+            <Button Fluent:FluentButton.ButtonStyle="Borderless"
+                    HorizontalOptions="FillAndExpand"
+                    IsEnabled="False"
+                    Text="Borderless Disabled" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -92,6 +92,14 @@
       <Project>{3B7F2825-83D9-4D79-9416-4F3A8A699281}</Project>
       <Name>FluentUISamples</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\FluentUI.Android\FluentUI.Android.csproj">
+      <Project>{B60EA945-C6E2-48CE-BF20-4C0BAA942527}</Project>
+      <Name>FluentUI.Android</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\FluentUI.Visual\FluentUI.Visual.csproj">
+      <Project>{85DF7DD7-20BA-4C05-891D-9D0D634BFDC5}</Project>
+      <Name>FluentUI.Visual</Name>
+    </ProjectReference>
   </ItemGroup>
  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
