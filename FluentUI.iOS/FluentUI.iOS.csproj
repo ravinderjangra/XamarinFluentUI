@@ -36,11 +36,12 @@
     </None>
     <NativeReference Include="..\Build\externals\FluentUI.framework">
       <Kind>Framework</Kind>
+      <Frameworks>UIKit</Frameworks>
     </NativeReference>
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Xamarin.iOS.SwiftRuntimeSupport" Version="0.1.0" />
+    <PackageReference Include="Xamarin.iOS.SwiftRuntimeSupport" Version="0.2.0" />
   </ItemGroup>
 
   <ItemGroup>

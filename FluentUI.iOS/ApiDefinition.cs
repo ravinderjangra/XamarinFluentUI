@@ -13,7 +13,7 @@ namespace FluentUIComponents
 
 	// @protocol AccessibleViewDelegate
 	[Protocol, Model]
-    [BaseType(typeof(NSObject), Name = ApiDefinitionConstants.MSFAccessibleViewDelegate)]
+    [BaseType(typeof(NSObject))]
 	interface AccessibleViewDelegate
 	{
 		// @optional -(NSString * _Nullable)accessibilityValueForAccessibleView:(UIView * _Nonnull)accessibleView __attribute__((warn_unused_result));
@@ -52,7 +52,7 @@ namespace FluentUIComponents
 
 	// @protocol AccessibleTableViewDelegate <AccessibleViewDelegate>
 	[Protocol, Model]
-	[BaseType(typeof(NSObject), Name = ApiDefinitionConstants.MSFAccessibleTableViewDelegate)]
+	[BaseType(typeof(NSObject))]
 	interface AccessibleTableViewDelegate
 	{
 		// @optional -(NSString * _Nullable)accessibilityValueForRowAtIndexPath:(NSIndexPath * _Nonnull)indexPath forTableView:(UITableView * _Nonnull)forTableView __attribute__((warn_unused_result));
@@ -62,7 +62,7 @@ namespace FluentUIComponents
 	}
 
 	// @interface MSFActionsCell : UITableViewCell
-	[BaseType(typeof(UITableViewCell), Name = ApiDefinitionConstants.MSFActionsCell)]
+	[BaseType(typeof(UITableViewCell))]
 	interface MSFActionsCell
 	{
 		// +(CGFloat)heightWithAction1Title:(NSString * _Nonnull)action1Title action2Title:(NSString * _Nonnull)action2Title containerWidth:(CGFloat)containerWidth __attribute__((warn_unused_result));
@@ -131,7 +131,7 @@ namespace FluentUIComponents
 	}
 
 	// @interface MSFActivityIndicatorCell : UITableViewCell
-	[BaseType(typeof(UITableViewCell), Name = ApiDefinitionConstants.MSFActivityIndicatorCell)]
+	[BaseType(typeof(UITableViewCell))]
 	interface MSFActivityIndicatorCell
 	{
 		// -(instancetype _Nonnull)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier __attribute__((objc_designated_initializer));
@@ -158,7 +158,7 @@ namespace FluentUIComponents
 	}
 
 	// @interface MSFActivityIndicatorView : UIView
-	[BaseType(typeof(UIView), Name = ApiDefinitionConstants.MSFActivityIndicatorView)]
+	[BaseType(typeof(UIView))]
 	interface MSFActivityIndicatorView
 	{
 		// +(CGSize)sizeThatFitsWithSize:(enum MSFActivityIndicatorViewSize)size __attribute__((warn_unused_result));
@@ -220,7 +220,7 @@ namespace FluentUIComponents
 
 	// @protocol MSFAnimationSynchronizerProtocol
 	[Model, Protocol]
-	[BaseType(typeof(NSObject), Name = ApiDefinitionConstants.MSFAnimationSynchronizerProtocol)]
+	[BaseType(typeof(NSObject))]
 	interface MSFAnimationSynchronizerProtocol
 	{
 		// @required @property (nonatomic, strong) CALayer * _Nullable referenceLayer;
@@ -235,7 +235,7 @@ namespace FluentUIComponents
 	}
 
 	// @interface MSFAnimationSynchronizer : NSObject <MSFAnimationSynchronizerProtocol>
-	[BaseType(typeof(NSObject), Name = ApiDefinitionConstants.MSFAnimationSynchronizer)]
+	[BaseType(typeof(NSObject))]
 	[DisableDefaultCtor]
 	interface MSFAnimationSynchronizer
 	{
@@ -275,7 +275,7 @@ namespace FluentUIComponents
 	}
 
 	// @interface MSFAvatarData : NSObject <MSFAvatar>
-	[BaseType(typeof(NSObject), Name = ApiDefinitionConstants.MSFAvatarData)]
+	[BaseType(typeof(NSObject))]
 	[DisableDefaultCtor]
 	interface MSFAvatarData : MSFAvatar
 	{
@@ -298,7 +298,7 @@ namespace FluentUIComponents
 	}
 
 	// @interface MSFAvatarView : UIView
-	[BaseType(typeof(UIView), Name = ApiDefinitionConstants.MSFAvatarView)]
+	[BaseType(typeof(UIView))]
 	interface MSFAvatarView
 	{
 		// @property (nonatomic) enum MSFAvatarSize avatarSize;
@@ -356,7 +356,7 @@ namespace FluentUIComponents
 	}
 
 	// @interface MSFBadgeField : UIView
-	[BaseType(typeof(UIView), Name = ApiDefinitionConstants.MSFBadgeField)]
+	[BaseType(typeof(UIView))]
 	interface MSFBadgeField
 	{
 		// @property (copy, nonatomic) NSString * _Nonnull label;
@@ -501,7 +501,7 @@ namespace FluentUIComponents
 
 	// @protocol MSFBadgeViewDelegate
 	[Protocol, Model]
-    [BaseType(typeof(NSObject), Name = ApiDefinitionConstants.MSFBadgeViewDelegate)]
+    [BaseType(typeof(NSObject))]
 	interface MSFBadgeViewDelegate
 	{
 		// @required -(void)didSelectBadge:(MSFBadgeView * _Nonnull)badge;
@@ -519,7 +519,7 @@ namespace FluentUIComponents
 
 	// @protocol MSFBadgeFieldDelegate
 	[Protocol, Model]
-    [BaseType(typeof(NSObject), Name = ApiDefinitionConstants.MSFBadgeFieldDelegate)]
+    [BaseType(typeof(NSObject))]
 	interface MSFBadgeFieldDelegate
 	{
 		// @optional -(MSFBadgeViewDataSource * _Nonnull)badgeField:(MSFBadgeField * _Nonnull)badgeField badgeDataSourceForText:(NSString * _Nonnull)text __attribute__((warn_unused_result));
@@ -592,7 +592,7 @@ namespace FluentUIComponents
 	}
 
 	// @interface MSFBadgeView : UIView
-	[BaseType(typeof(UIView), Name = ApiDefinitionConstants.MSFBadgeView)]
+	[BaseType(typeof(UIView))]
 	interface MSFBadgeView
 	{
 		// @property (nonatomic, strong) MSFBadgeViewDataSource * _Nullable dataSource;
@@ -642,7 +642,7 @@ namespace FluentUIComponents
 	}
 
 	// @interface MSFBadgeViewDataSource : NSObject
-	[BaseType(typeof(NSObject), Name = ApiDefinitionConstants.MSFBadgeViewDataSource)]
+	[BaseType(typeof(NSObject))]
 	[DisableDefaultCtor]
 	interface MSFBadgeViewDataSource
 	{
@@ -672,7 +672,7 @@ namespace FluentUIComponents
 	}
 
 	// @interface MSFBlurringView : UIView
-	[BaseType(typeof(UIView), Name = ApiDefinitionConstants.MSFBlurringView)]
+	[BaseType(typeof(UIView))]
 	interface MSFBlurringView
 	{
 		// -(instancetype _Nonnull)initWithStyle:(UIBlurEffectStyle)style backgroundColor:(UIColor * _Nullable)backgroundColor __attribute__((objc_designated_initializer));
@@ -690,7 +690,7 @@ namespace FluentUIComponents
 	}
 
 	// @interface MSFTableViewCell : UITableViewCell
-	[BaseType(typeof(UITableViewCell), Name = ApiDefinitionConstants.MSFTableViewCell)]
+	[BaseType(typeof(UITableViewCell))]
 	interface MSFTableViewCell
 	{
 		// @property (readonly, nonatomic, class) CGFloat smallHeight;
@@ -904,7 +904,7 @@ namespace FluentUIComponents
 	}
 
 	// @interface MSFBooleanCell : MSFTableViewCell
-	[BaseType(typeof(MSFTableViewCell), Name = ApiDefinitionConstants.MSFBooleanCell)]
+	[BaseType(typeof(MSFTableViewCell))]
 	interface MSFBooleanCell
 	{
 		// @property (nonatomic) BOOL isOn;
@@ -926,7 +926,7 @@ namespace FluentUIComponents
 	}
 
 	// @interface MSFButton : UIButton
-	[BaseType(typeof(UIButton), Name = ApiDefinitionConstants.MSFButton)]
+	[BaseType(typeof(UIButton))]
 	interface MSFButton
 	{
 		// @property (nonatomic) enum MSFButtonStyle style;
@@ -965,7 +965,7 @@ namespace FluentUIComponents
 	}
 
 	// @interface MSFCalendarConfiguration : NSObject
-	[BaseType(typeof(NSObject), Name = ApiDefinitionConstants.MSFCalendarConfiguration)]
+	[BaseType(typeof(NSObject))]
 	[DisableDefaultCtor]
 	interface MSFCalendarConfiguration
 	{
@@ -980,7 +980,7 @@ namespace FluentUIComponents
 	}
 
 	// @interface MSFCenteredLabelCell : UITableViewCell
-	[BaseType(typeof(UITableViewCell), Name = ApiDefinitionConstants.MSFCenteredLabelCell)]
+	[BaseType(typeof(UITableViewCell))]
 	interface MSFCenteredLabelCell
 	{
 		// -(instancetype _Nonnull)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString * _Nullable)reuseIdentifier __attribute__((objc_designated_initializer));
@@ -1002,7 +1002,7 @@ namespace FluentUIComponents
 	}
 
 	// @interface MSFColors : NSObject
-	[BaseType(typeof(NSObject), Name = ApiDefinitionConstants.MSFColors)]
+	[BaseType(typeof(NSObject))]
 	[DisableDefaultCtor]
 	interface MSFColors
 	{
@@ -1288,7 +1288,7 @@ namespace FluentUIComponents
 	}
 
 	// @interface MSFDateTimePicker : NSObject
-	[BaseType(typeof(NSObject), Name = ApiDefinitionConstants.MSFDateTimePicker)]
+	[BaseType(typeof(NSObject))]
 	interface MSFDateTimePicker
 	{
 		[Wrap ("WeakDelegate")]
@@ -1318,7 +1318,7 @@ namespace FluentUIComponents
 
 	// @protocol MSFDateTimePickerDelegate
 	[Protocol, Model]
-	[BaseType(typeof(NSObject), Name = ApiDefinitionConstants.MSFDateTimePickerDelegate)]
+	[BaseType(typeof(NSObject))]
 	interface MSFDateTimePickerDelegate
 	{
 		// @required -(void)dateTimePicker:(MSFDateTimePicker * _Nonnull)dateTimePicker didPickStartDate:(NSDate * _Nonnull)startDate endDate:(NSDate * _Nonnull)endDate;
@@ -1332,7 +1332,7 @@ namespace FluentUIComponents
 	}
 
 	// @interface MSFDimmingView : UIView
-	[BaseType(typeof(UIView), Name = ApiDefinitionConstants.MSFDimmingView)]
+	[BaseType(typeof(UIView))]
 	interface MSFDimmingView
 	{
 		// -(instancetype _Nonnull)initWithType:(enum MSFDimmingViewType)type __attribute__((objc_designated_initializer));
@@ -1342,7 +1342,7 @@ namespace FluentUIComponents
 	}
 
 	// @interface MSFDotView : UIView
-	[BaseType(typeof(UIView), Name = ApiDefinitionConstants.MSFDotView)]
+	[BaseType(typeof(UIView))]
 	interface MSFDotView
 	{
 		// @property (nonatomic, strong) UIColor * _Nullable color;
@@ -1360,7 +1360,7 @@ namespace FluentUIComponents
 	}
 
 	// @interface MSFDrawerController : UIViewController
-	[BaseType(typeof(UIViewController), Name = ApiDefinitionConstants.MSFDrawerController)]
+	[BaseType(typeof(UIViewController))]
 	interface MSFDrawerController
 	{
 		// @property (nonatomic, strong) UIColor * _Nonnull backgroundColor;
@@ -1490,7 +1490,7 @@ namespace FluentUIComponents
 
 	// @protocol MSFDrawerControllerDelegate
 	[Protocol, Model]
-	[BaseType(typeof(NSObject), Name = ApiDefinitionConstants.MSFDrawerControllerDelegate)]
+	[BaseType(typeof(NSObject))]
 	interface MSFDrawerControllerDelegate
 	{
 		// @optional -(void)drawerControllerDidChangeExpandedState:(MSFDrawerController * _Nonnull)controller;
@@ -1507,7 +1507,7 @@ namespace FluentUIComponents
 	}
 
 	// @interface MSFEasyTapButton : UIButton
-	[BaseType(typeof(UIButton), Name = ApiDefinitionConstants.MSFEasyTapButton)]
+	[BaseType(typeof(UIButton))]
 	interface MSFEasyTapButton
 	{
 		// -(BOOL)pointInside:(CGPoint)point withEvent:(UIEvent * _Nullable)event __attribute__((warn_unused_result));
@@ -1546,7 +1546,7 @@ namespace FluentUIComponents
 	}
 
 	// @interface MSFFonts : NSObject
-	[BaseType(typeof(NSObject), Name = ApiDefinitionConstants.MSFFonts)]
+	[BaseType(typeof(NSObject))]
 	[DisableDefaultCtor]
 	interface MSFFonts
 	{
@@ -1632,7 +1632,7 @@ namespace FluentUIComponents
 	}
 
 	// @interface MSFHUD : NSObject
-	[BaseType(typeof(NSObject), Name = ApiDefinitionConstants.MSFHud)]
+	[BaseType(typeof(NSObject))]
 	[DisableDefaultCtor]
 	interface MSFHUD
 	{
@@ -1698,7 +1698,7 @@ namespace FluentUIComponents
 
 	// @protocol MSFHUDDelegate
 	[Protocol, Model]
-	[BaseType(typeof(NSObject), Name = ApiDefinitionConstants.MSFHudDelegate)]
+	[BaseType(typeof(NSObject))]
 	interface MSFHUDDelegate
 	{
 		// @required -(UIWindow * _Nullable)defaultWindowForHUD:(MSFHUD * _Nonnull)hud __attribute__((warn_unused_result));
@@ -1709,7 +1709,7 @@ namespace FluentUIComponents
 	}
 
 	// @interface MSFHUDParams : NSObject
-	[BaseType(typeof(NSObject), Name = ApiDefinitionConstants.MSFHudParams)]
+	[BaseType(typeof(NSObject))]
 	interface MSFHUDParams
 	{
 		// @property (copy, nonatomic) NSString * _Nonnull caption;
@@ -1734,7 +1734,7 @@ namespace FluentUIComponents
 	}
 
 	// @interface MSFLabel : UILabel
-	[BaseType (typeof (UILabel), Name = ApiDefinitionConstants.MSFLabel)]
+	[BaseType (typeof (UILabel))]
 	interface MSFLabel
 	{
 		// @property (nonatomic) enum MSFTextColorStyle colorStyle;
@@ -1760,7 +1760,7 @@ namespace FluentUIComponents
 	}
 
 	// @interface MSFNavigationBar : UINavigationBar
-	[BaseType(typeof(UINavigationBar), Name = ApiDefinitionConstants.MSFNavigationBar)]
+	[BaseType(typeof(UINavigationBar))]
 	interface MSFNavigationBar
 	{
 		// @property (nonatomic, strong) id<MSFAvatar> _Nullable avatar;
@@ -1810,7 +1810,7 @@ namespace FluentUIComponents
 	}
 
 	// @interface MSFNavigationController : UINavigationController
-	[BaseType(typeof(UINavigationController), Name = ApiDefinitionConstants.MSFNavigationController)]
+	[BaseType(typeof(UINavigationController))]
 	interface MSFNavigationController
 	{
 		// @property (readonly, nonatomic, strong) MSFNavigationBar * _Nonnull msfNavigationBar;
@@ -1885,7 +1885,7 @@ namespace FluentUIComponents
 	}
 
     // @interface MSFNotificationView : UIView
-	[BaseType(typeof(UIView), Name = ApiDefinitionConstants.MSFNotificationView)]
+	[BaseType(typeof(UIView))]
 	interface MSFNotificationView
 	{
 		// @property (nonatomic, class) BOOL allowsMultipleToasts;
@@ -1928,7 +1928,7 @@ namespace FluentUIComponents
 	}
 
 	// @interface MSFPageCardPresenterController : UIViewController
-	[BaseType(typeof(UIViewController), Name = ApiDefinitionConstants.MSFPageCardPresenterController)]
+	[BaseType(typeof(UIViewController))]
 	interface MSFPageCardPresenterController
 	{
 		// @property (nonatomic) UIModalPresentationStyle modalPresentationStyle;
@@ -1957,7 +1957,7 @@ namespace FluentUIComponents
 	}
 
     // @interface MSFPeoplePicker : MSFBadgeField
-	[BaseType(typeof(MSFBadgeField), Name = ApiDefinitionConstants.MSFPeoplePicker)]
+	[BaseType(typeof(MSFBadgeField))]
 	interface MSFPeoplePicker
 	{
 		// @property (copy, nonatomic) NSArray<id<MSFPersona>> * _Nonnull availablePersonas;
@@ -2026,7 +2026,7 @@ namespace FluentUIComponents
 
 	// @protocol MSFPersonaListViewSearchDirectoryDelegate
 	[Protocol, Model]
-	[BaseType(typeof(NSObject), Name = ApiDefinitionConstants.MSFPersonaListViewSearchDirectoryDelegate)]
+	[BaseType(typeof(NSObject))]
 	interface MSFPersonaListViewSearchDirectoryDelegate
 	{
 		// @required -(void)personaListSearchDirectory:(MSFPersonaListView * _Nonnull)personaListView completion:(void (^ _Nonnull)(BOOL))completion;
@@ -2039,7 +2039,7 @@ namespace FluentUIComponents
 
 	// @protocol MSFPeoplePickerDelegate <MSFBadgeFieldDelegate>
 	[Protocol, Model]
-	[BaseType(typeof(NSObject), Name = ApiDefinitionConstants.MSFPeoplePickerDelegate)]
+	[BaseType(typeof(NSObject))]
 	interface MSFPeoplePickerDelegate : MSFBadgeFieldDelegate
 	{
 		// @optional -(void)peoplePicker:(MSFPeoplePicker * _Nonnull)peoplePicker getSuggestedPersonasForText:(NSString * _Nonnull)text completion:(void (^ _Nonnull)(NSArray<id<MSFPersona>> * _Nonnull))completion;
@@ -2083,7 +2083,7 @@ namespace FluentUIComponents
 
 	// @protocol MSFPersona <MSFAvatar>
 	[Protocol, Model]
-	[BaseType(typeof(NSObject), Name = ApiDefinitionConstants.MSFPersona)]
+	[BaseType(typeof(NSObject))]
 	interface MSFPersona
 	{
 		// @required @property (readonly, nonatomic, strong) UIImage * _Nullable avatarImage;
@@ -2108,7 +2108,7 @@ namespace FluentUIComponents
 	}
 
 	// @interface MSFPersonaBadgeViewDataSource : MSFBadgeViewDataSource
-	[BaseType(typeof(MSFBadgeViewDataSource), Name = ApiDefinitionConstants.MSFPersonaBadgeViewDataSource)]
+	[BaseType(typeof(MSFBadgeViewDataSource))]
 	interface MSFPersonaBadgeViewDataSource
 	{
 		// @property (nonatomic, strong) id<MSFPersona> _Nonnull persona;
@@ -2122,7 +2122,7 @@ namespace FluentUIComponents
 	}
 
 	// @interface MSFPersonaCell : MSFTableViewCell
-	[BaseType(typeof(MSFTableViewCell), Name = ApiDefinitionConstants.MSFPersonaCell)]
+	[BaseType(typeof(MSFTableViewCell))]
 	interface MSFPersonaCell
 	{
 		// @property (nonatomic) enum MSFTableViewCellCustomViewSize customViewSize;
@@ -2140,7 +2140,7 @@ namespace FluentUIComponents
 	}
 
 	// @interface MSFPersonaData : NSObject <MSFPersona>
-	[BaseType (typeof (NSObject), Name = ApiDefinitionConstants.MSFPersonaData)]
+	[BaseType (typeof (NSObject))]
 	[DisableDefaultCtor]
 	interface MSFPersonaData : IMSFPersona
 	{
@@ -2179,7 +2179,7 @@ namespace FluentUIComponents
 	}
 
 	// @interface MSFPersonaListView : UITableView
-	[BaseType (typeof (UITableView), Name = ApiDefinitionConstants.MSFPersonaListView)]
+	[BaseType (typeof (UITableView))]
 	interface MSFPersonaListView
 	{
 		// @property (copy, nonatomic) NSArray<id<MSFPersona>> * _Nonnull personaList;
@@ -2216,7 +2216,7 @@ namespace FluentUIComponents
 	}
 
     // @interface MSFPillButton : UIButton
-	[BaseType (typeof(UIButton), Name = ApiDefinitionConstants.MSFPillButton)]
+	[BaseType (typeof(UIButton))]
 	interface MSFPillButton
 	{
 		// @property (readonly, nonatomic, strong) MSFPillButtonBarItem * _Nonnull pillBarItem;
@@ -2238,7 +2238,7 @@ namespace FluentUIComponents
 	}
 
 	// @interface MSFPillButtonBar : UIScrollView
-	[BaseType (typeof(UIScrollView), Name = ApiDefinitionConstants.MSFPillButtonBar)]
+	[BaseType (typeof(UIScrollView))]
 	interface MSFPillButtonBar
 	{
 		[Wrap ("WeakBarDelegate")]
@@ -2290,7 +2290,7 @@ namespace FluentUIComponents
 	interface IMSFPillButtonBarDelegate { }
 
 	// @protocol MSFPillButtonBarDelegate
-	[BaseType(typeof(NSObject), Name = ApiDefinitionConstants.MSFPillButtonBarDelegate)]
+	[BaseType(typeof(NSObject))]
 	[Protocol, Model]
 	interface MSFPillButtonBarDelegate
 	{
@@ -2300,7 +2300,7 @@ namespace FluentUIComponents
 	}
 
 	// @interface MSFPillButtonBarItem : NSObject
-	[BaseType(typeof(NSObject), Name = ApiDefinitionConstants.MSFPillButtonBarItem)]
+	[BaseType(typeof(NSObject))]
 	[DisableDefaultCtor]
 	interface MSFPillButtonBarItem
 	{
@@ -2315,7 +2315,7 @@ namespace FluentUIComponents
 	}
 
 	// @interface MSFPopupMenuController : MSFDrawerController
-	[BaseType (typeof (MSFDrawerController), Name = ApiDefinitionConstants.MSFPopupMenuController)]
+	[BaseType (typeof (MSFDrawerController))]
 	interface MSFPopupMenuController
 	{
 		// @property (nonatomic, strong) UIView * _Nullable contentView;
@@ -2386,7 +2386,7 @@ namespace FluentUIComponents
 	}
 
 	// @interface MSFPopupMenuItem : NSObject
-	[BaseType (typeof (NSObject), Name = ApiDefinitionConstants.MSFPopupMenuItem)]
+	[BaseType (typeof (NSObject))]
 	[DisableDefaultCtor]
 	interface MSFPopupMenuItem
 	{
@@ -2477,7 +2477,7 @@ namespace FluentUIComponents
 	}
 
 	// @interface MSFPopupMenuSection : NSObject
-	[BaseType (typeof (NSObject), Name = ApiDefinitionConstants.MSFPopupMenuSection)]
+	[BaseType (typeof (NSObject))]
 	[DisableDefaultCtor]
 	interface MSFPopupMenuSection
 	{
@@ -2496,7 +2496,7 @@ namespace FluentUIComponents
 	}
 
 	// @interface MSFResizingHandleView : UIView
-	[BaseType (typeof (UIView), Name = ApiDefinitionConstants.MSFResizingHandleView)]
+	[BaseType (typeof (UIView))]
 	interface MSFResizingHandleView
 	{
 		// @property (readonly, nonatomic, class) CGFloat height;
@@ -2524,7 +2524,7 @@ namespace FluentUIComponents
 
 	// @interface MSFScrollView : UIScrollView
 	//[Unavailable (PlatformName.iOSAppExtension)]
-	[BaseType(typeof(UIScrollView), Name = ApiDefinitionConstants.MSFScrollView)]
+	[BaseType(typeof(UIScrollView))]
 	interface MSFScrollView
 	{
 		// -(instancetype _Nonnull)initWithFrame:(CGRect)frame __attribute__((objc_designated_initializer));
@@ -2541,7 +2541,7 @@ namespace FluentUIComponents
 	}
 
 	// @interface MSFSearchBar : UIView
-	[BaseType(typeof(UIView), Name = ApiDefinitionConstants.MSFSearchBar)]
+	[BaseType(typeof(UIView))]
 	interface MSFSearchBar
 	{
 		// @property (nonatomic) CGFloat cornerRadius;
@@ -2598,7 +2598,7 @@ namespace FluentUIComponents
 
 	// @protocol MSFSearchBarDelegate <NSObject>
 	[Protocol, Model]
-	[BaseType(typeof(NSObject), Name = ApiDefinitionConstants.MSFSearchBarDelegate)]
+	[BaseType(typeof(NSObject))]
 	interface MSFSearchBarDelegate
 	{
 		// @required -(void)searchBarDidBeginEditing:(MSFSearchBar * _Nonnull)searchBar;
@@ -2626,7 +2626,7 @@ namespace FluentUIComponents
 	}
 
 	// @interface MSFSegmentedControl : UIControl
-	[BaseType (typeof (UIControl), Name = ApiDefinitionConstants.MSFSegmentedControl)]
+	[BaseType (typeof (UIControl))]
 	interface MSFSegmentedControl
 	{
 		// @property (getter = isEnabled, nonatomic) BOOL enabled;
@@ -2676,7 +2676,7 @@ namespace FluentUIComponents
 	}
 
 	// @interface MSFSeparator : UIView
-	[BaseType (typeof (UIView), Name = ApiDefinitionConstants.MSFSeparator)]
+	[BaseType (typeof (UIView))]
 	interface MSFSeparator
 	{
 		// -(instancetype _Nonnull)initWithStyle:(enum MSFSeparatorStyle)style orientation:(enum MSFSeparatorOrientation)orientation __attribute__((objc_designated_initializer));
@@ -2694,7 +2694,7 @@ namespace FluentUIComponents
 	}
 
 	// @interface MSFShimmerAppearance : NSObject
-	[BaseType(typeof(NSObject), Name = ApiDefinitionConstants.MSFShimmerAppearance)]
+	[BaseType(typeof(NSObject))]
 	[DisableDefaultCtor]
 	interface MSFShimmerAppearance
 	{
@@ -2725,7 +2725,7 @@ namespace FluentUIComponents
 	}
 
 	// @interface MSFShimmerView : UIView
-	[BaseType(typeof(UIView), Name = ApiDefinitionConstants.MSFShimmerView)]
+	[BaseType(typeof(UIView))]
 	interface MSFShimmerView
 	{
 		// @property (nonatomic, strong) MSFShimmerAppearance * _Nonnull shimmerAppearance;
@@ -2759,7 +2759,7 @@ namespace FluentUIComponents
 	}
 
 	// @interface MSFShimmerLinesView : MSFShimmerView
-	[BaseType(typeof(MSFShimmerView), Name = ApiDefinitionConstants.MSFShimmerLinesView)]
+	[BaseType(typeof(MSFShimmerView))]
 	interface MSFShimmerLinesView
 	{
 		// +(CGSize)sizeThatFits:(CGSize)size appearance:(MSFShimmerLinesViewAppearance * _Nonnull)appearance __attribute__((warn_unused_result));
@@ -2790,7 +2790,7 @@ namespace FluentUIComponents
 	}
 
 	// @interface MSFShimmerLinesViewAppearance : NSObject
-	[BaseType(typeof(NSObject), Name = ApiDefinitionConstants.MSFShimmerLinesViewAppearance)]
+	[BaseType(typeof(NSObject))]
 	[DisableDefaultCtor]
 	interface MSFShimmerLinesViewAppearance
 	{
@@ -2821,7 +2821,7 @@ namespace FluentUIComponents
 	}
 
 	// @interface MSFShimmerViewAppearence : NSObject
-	[BaseType(typeof(NSObject), Name = ApiDefinitionConstants.MSFShimmerViewAppearence)]
+	[BaseType(typeof(NSObject))]
 	[DisableDefaultCtor]
 	interface MSFShimmerViewAppearence
 	{
@@ -2852,7 +2852,7 @@ namespace FluentUIComponents
 	}
 
 	// @interface MSFTabBarItem : NSObject
-	[BaseType(typeof(NSObject), Name = ApiDefinitionConstants.MSFTabBarItem)]
+	[BaseType(typeof(NSObject))]
 	[DisableDefaultCtor]
 	interface MSFTabBarItem
 	{
@@ -2867,7 +2867,7 @@ namespace FluentUIComponents
 	}
 
 	// @interface MSFTabBarView : UIView
-	[BaseType(typeof(UIView), Name = ApiDefinitionConstants.MSFTabBarView)]
+	[BaseType(typeof(UIView))]
 	interface MSFTabBarView
 	{
 		// @property (copy, nonatomic) NSArray<MSFTabBarItem *> * _Nonnull items;
@@ -2900,7 +2900,7 @@ namespace FluentUIComponents
 
 	// @protocol MSFTabBarViewDelegate
 	[Protocol, Model]
-	[BaseType(typeof(NSObject), Name = ApiDefinitionConstants.MSFTabBarViewDelegate)]
+	[BaseType(typeof(NSObject))]
 	interface MSFTabBarViewDelegate
 	{
 		// @optional -(void)tabBarView:(MSFTabBarView * _Nonnull)tabBarView didSelect:(MSFTabBarItem * _Nonnull)item;
@@ -2909,7 +2909,7 @@ namespace FluentUIComponents
 	}
 
 	// @interface MSFTableViewHeaderFooterView : UITableViewHeaderFooterView
-	[BaseType (typeof (UITableViewHeaderFooterView), Name = ApiDefinitionConstants.MSFTableViewHeaderFooterView)]
+	[BaseType (typeof (UITableViewHeaderFooterView))]
 	interface MSFTableViewHeaderFooterView
 	{
 		// @property (readonly, copy, nonatomic, class) NSString * _Nonnull identifier;
@@ -2990,7 +2990,7 @@ namespace FluentUIComponents
 
 	// @protocol [BaseType(typeof(NSObject))]
 	[Protocol, Model]
-	[BaseType(typeof(NSObject), Name = ApiDefinitionConstants.MSFTableViewHeaderFooterViewDelegate)]
+	[BaseType(typeof(NSObject))]
 	interface MSFTableViewHeaderFooterViewDelegate
 	{
 		// @optional -(BOOL)headerFooterView:(MSFTableViewHeaderFooterView * _Nonnull)headerFooterView shouldInteractWith:(NSURL * _Nonnull)URL in:(NSRange)characterRange interaction:(UITextItemInteraction)interaction __attribute__((warn_unused_result));
@@ -2999,7 +2999,7 @@ namespace FluentUIComponents
 	}
 
 	// @interface MSFTooltip : NSObject
-	[BaseType (typeof (NSObject), Name = ApiDefinitionConstants.MSFTooltip)]
+	[BaseType (typeof (NSObject))]
 	[DisableDefaultCtor]
 	interface MSFTooltip
 	{
@@ -3031,7 +3031,7 @@ namespace FluentUIComponents
 	}
 
 	// @interface MSFTouchForwardingView : UIView
-	[BaseType (typeof (UIView), Name = ApiDefinitionConstants.MSFTouchForwardingView)]
+	[BaseType (typeof (UIView))]
 	interface MSFTouchForwardingView
 	{
 		// -(BOOL)pointInside:(CGPoint)point withEvent:(UIEvent * _Nullable)event __attribute__((warn_unused_result));
@@ -3045,7 +3045,7 @@ namespace FluentUIComponents
 	}
 
 	// @interface MSFTwoLineTitleView : UIView
-	[BaseType (typeof (UIView), Name = ApiDefinitionConstants.MSFTwoLineTitleView)]
+	[BaseType (typeof (UIView))]
 	interface MSFTwoLineTitleView
 	{
 		// @property (copy, nonatomic) NSString * _Nullable titleAccessibilityHint;
@@ -3115,7 +3115,7 @@ namespace FluentUIComponents
 
 	// @protocol MSFTwoLineTitleViewDelegate
 	[Protocol, Model]
-	[BaseType (typeof (NSObject), Name = ApiDefinitionConstants.MSFTwoLineTitleViewDelegate)]
+	[BaseType (typeof (NSObject))]
 	interface MSFTwoLineTitleViewDelegate
 	{
 		// @required -(void)twoLineTitleViewDidTapOnTitle:(MSFTwoLineTitleView * _Nonnull)twoLineTitleView;
