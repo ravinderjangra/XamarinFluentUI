@@ -15,4 +15,7 @@
   <attr path="/api/package[@name='com.microsoft.fluentui.popupmenu']/class[@name='PopupMenuItem.CREATOR']" name="managedName">Creator</attr>
   <attr path="/api/package[@name='com.microsoft.fluentui.popupmenu']/class[@name='PopupMenuItem.CREATOR']/method[@name='createFromParcel' and count(parameter)=1 and parameter[1][@type='android.os.Parcel']]" name="managedReturn">Java.Lang.Object</attr>
   <attr path="/api/package[@name='com.microsoft.fluentui.popupmenu']/class[@name='PopupMenuItem.CREATOR']/method[@name='newArray' and count(parameter)=1 and parameter[1][@type='int']]" name="managedReturn">Java.Lang.Object[]</attr>
+  
+  <remove-node path="/api/package[starts-with (@name, 'com.microsoft.fluentui.peoplepicker')]" />
+  <!--<remove-node path="/api/package[@name='com.microsoft.fluentui.peoplepicker']/interface[@name='PeoplePickerView.PersonaSuggestionsListener']" />-->
 </metadata>
