@@ -1,4 +1,25 @@
-﻿<?xml version="1.0" encoding="UTF-8"?><metadata>  
+﻿<?xml version="1.0" encoding="UTF-8"?><metadata>
+  <!-- Flattering namespace -->
+  <attr path="/api/package[@name='com.microsoft.fluentui']" name="managedName">FluentUI</attr>
+  <attr path="/api/package[@name='com.microsoft.fluentui.calendar']" name="managedName">FluentUI</attr>
+  <attr path="/api/package[@name='com.microsoft.fluentui.datetimepicker']" name="managedName">FluentUI</attr>
+  <attr path="/api/package[@name='com.microsoft.fluentui.managers']" name="managedName">FluentUI</attr>
+  <attr path="/api/package[@name='com.microsoft.fluentui.peoplepicker']" name="managedName">FluentUI</attr>
+  <attr path="/api/package[@name='com.microsoft.fluentui.persona']" name="managedName">FluentUI</attr>
+  <attr path="/api/package[@name='com.microsoft.fluentui.snackbar']" name="managedName">FluentUI</attr>
+  <attr path="/api/package[@name='com.microsoft.fluentui.tooltip']" name="managedName">FluentUI</attr>
+  <attr path="/api/package[@name='com.microsoft.fluentui.util']" name="managedName">FluentUI</attr>
+  <attr path="/api/package[@name='com.microsoft.fluentui.view']" name="managedName">FluentUI</attr>
+  <attr path="/api/package[@name='com.microsoft.fluentui.bottomsheet']" name="managedName">FluentUI</attr>
+  <attr path="/api/package[@name='com.microsoft.fluentui.drawer']" name="managedName">FluentUI</attr>
+  <attr path="/api/package[@name='com.microsoft.fluentui.listitem']" name="managedName">FluentUI</attr>
+  <attr path="/api/package[@name='com.microsoft.fluentui.appbarlayout']" name="managedName">FluentUI</attr>
+  <attr path="/api/package[@name='com.microsoft.fluentui.popupmenu']" name="managedName">FluentUI</attr>
+  <attr path="/api/package[@name='com.microsoft.fluentui.search']" name="managedName">FluentUI</attr>
+  <attr path="/api/package[@name='com.microsoft.fluentui.theming']" name="managedName">FluentUI</attr>
+  <attr path="/api/package[@name='com.microsoft.fluentui.toolbar']" name="managedName">FluentUI</attr>
+   <attr path="/api/package[@name='com.microsoft.fluentui.widget']" name="managedName">FluentUI</attr>
+  
   <attr path="/api/package[@name='com.microsoft.fluentui.util']/class[@name='ColorProperty']/method[@name='setValue' and count(parameter)=2 and parameter[1][@type='android.view.View'] and parameter[2][@type='float']]/parameter[1]" name="managedType">Java.Lang.Object</attr>
   <attr path="/api/package[@name='com.microsoft.fluentui.util']/class[@name='ColorProperty']/method[@name='get' and count(parameter)=1 and parameter[1][@type='android.view.View']]/parameter[1]" name="managedType">Java.Lang.Object</attr>
   <attr path="/api/package[@name='com.microsoft.fluentui.util']/class[@name='ColorProperty']/method[@name='get' and count(parameter)=1 and parameter[1][@type='android.view.View']]" name="managedReturn">Java.Lang.Object</attr>
