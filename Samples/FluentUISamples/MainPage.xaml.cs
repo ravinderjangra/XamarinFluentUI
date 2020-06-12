@@ -22,6 +22,11 @@ namespace FluentUISamples
             {
                 Navigation.PushAsync(new LabelExamples());
             };
+
+            ShowActivityIndicatorExamples.Clicked += (s, e) =>
+            {
+                Navigation.PushAsync(new ActivityIndicatorExamples());
+            };
         }
     }
 }

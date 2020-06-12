@@ -46,4 +46,13 @@
         Medium,
         Regular
     }
+
+    public enum FluentSpinnerStyle
+    {
+        XSmall,
+        Small,
+        Medium,
+        Large,
+        XLarge
+    }
 }
