@@ -1,4 +1,5 @@
-﻿using Android.Content;
+﻿using System.ComponentModel;
+using Android.Content;
 using FluentUI.Visual.Forms;
 using FluentUI.Visual.Platform.Android;
 using Xamarin.Forms;
@@ -19,6 +20,22 @@ namespace FluentUI.Visual.Platform.Android
         {
             var fluentBtn = new FluentButton(Context);
             return fluentBtn;
+        }
+
+        protected override void OnElementPropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            base.OnElementPropertyChanged(sender, e);
+
+            //if (e.PropertyName == FluentButton.ButtonStyleProperty.PropertyName)
+            //    UpdateButtonStyle();
+        }
+
+        private void UpdateButtonStyle()
+        {
+            //if (Control != null)
+            //{
+            //    var style = FluentButton.GetButtonStyle(Element);
+            //}
         }
     }
 }
