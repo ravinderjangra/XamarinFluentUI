@@ -8,6 +8,7 @@
     <ContentPage.Content>
         <StackLayout Padding="20" Visual="Fluent">
             <DatePicker />
+            <TimePicker />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -78,22 +78,8 @@ namespace FluentUI.Visual.Platform.iOS
 
 		void ShowDatePicker()
         {
-			var presentingController = GetTopViewController(UIApplication.SharedApplication.KeyWindow.RootViewController);
+			var presentingController = PlatformUtils.GetTopViewController();
 			_picker.PresentFrom(presentingController, MSFDateTimePickerMode.MSFDateTimePickerModeDate, _startDate, _endDate, MSFDateTimePickerDatePickerType.Calendar, MSFDateTimePickerDateRangePresentation.Paged, null);
-		}
-
-		protected UIViewController GetTopViewController(UIViewController viewController)
-		{
-			if (viewController is UINavigationController navigationController)
-				return GetTopViewController(navigationController.VisibleViewController);
-
-			if (viewController is UITabBarController tabBarController)
-				return GetTopViewController(tabBarController.SelectedViewController);
-
-			if (viewController.PresentedViewController != null)
-				return GetTopViewController(viewController.PresentedViewController);
-
-			return viewController;
 		}
 
 		void UpdateElementDate()
