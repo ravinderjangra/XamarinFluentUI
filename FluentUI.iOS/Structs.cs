@@ -162,8 +162,8 @@ namespace FluentUIComponents
 	[Native]
 	public enum MSFDateTimePickerDatePickerType : long
 	{
-		alendar = 0,
-		omponents = 1
+		Calendar = 0,
+		Components = 1
 	}
 
 	[Native]

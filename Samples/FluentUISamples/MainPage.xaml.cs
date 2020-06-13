@@ -27,6 +27,11 @@ namespace FluentUISamples
             {
                 Navigation.PushAsync(new ActivityIndicatorExamples());
             };
+
+            ShowDatePickerExamples.Clicked += (s, e) =>
+            {
+                Navigation.PushAsync(new DatePickerExamples());
+            };
         }
     }
 }

@@ -14,5 +14,6 @@
         <Button x:Name="ShowButtonExamples" Text="Buttons" />
         <Button x:Name="ShowLabelExamples" Text="Labels" />
         <Button x:Name="ShowActivityIndicatorExamples" Text="Activity Indicators" />
+        <Button x:Name="ShowDatePickerExamples" Text="Date Picker" />
     </StackLayout>
 </ContentPage>
