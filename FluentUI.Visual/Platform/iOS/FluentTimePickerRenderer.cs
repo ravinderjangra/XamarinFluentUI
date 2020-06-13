@@ -31,7 +31,7 @@ namespace FluentUI.Visual.Platform.iOS
 				var entry = CreateNativeControl();
 				entry.EditingDidBegin += OnStarted;
 				entry.EditingDidEnd += OnEnded;
-				entry.Text = "Select date";
+				entry.Text = "Select time";
 
 				var tapGesture = new UITapGestureRecognizer(
 					() => ShowDatePicker())
